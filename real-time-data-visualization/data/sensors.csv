@@ -1,0 +1,16 @@
+python
+import os
+import csv
+
+# Define the path to the sensors.csv file
+data_dir = "real-time-data-visualization/data"
+filename = "sensors.csv"
+file_path = os.path.join(data_dir, filename)
+
+# Open the file in read mode
+with open(file_path, 'r') as csv_file:
+    csv_reader = csv.reader(csv_file)
+
+    # Read and print each row of the file
+    for row in csv_reader:
+        print(row)
