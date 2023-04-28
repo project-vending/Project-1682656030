@@ -1,0 +1,21 @@
+python
+import csv
+import os
+
+# Define the path to the tweets.csv file
+tweets_file = os.path.join("real-time-data-visualization", "data", "tweets.csv")
+
+# Open the tweets.csv file for writing
+with open(tweets_file, 'w', newline='', encoding='utf-8') as csvfile:
+
+    # Create a writer object
+    writer = csv.writer(csvfile)
+
+    # Write the header row
+    writer.writerow(["id", "text", "created_at", "user_id"])
+
+    # Write some sample data
+    writer.writerow(["1", "This is a sample tweet", "2023-03-02 12:00:00", "123456"])
+
+# Print success message
+print("tweets.csv created successfully!")
